@@ -228,7 +228,7 @@
 
   $effect(() => {
     fetchLoadedModels()
-    const timer = setInterval(fetchLoadedModels, 2000)
+    const timer = setInterval(fetchLoadedModels, 4000)
     return () => clearInterval(timer)
   })
 
