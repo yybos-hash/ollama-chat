@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+  --black: #000000;
+  --black-soft: #0e0e10;
+  --panel: #151417;
+  --panel-raised: #1d1b20;
+  --border: #4a4350;
+  --white: #ffffff;
+  --white-dim: #d8d1c9;
+  --velvet: #5c1129;
+  --velvet-bright: #e21f63;
+  --velvet-glow: rgba(226, 31, 99, 0.45);
+
+  --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  color-scheme: dark;
+  font: 15px/1.6 var(--mono);
+  color: var(--white);
+  background: var(--black);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--black);
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  background-image:
+    repeating-radial-gradient(
+      circle at 88% 8%,
+      rgba(226, 31, 99, 0.2) 0px,
+      rgba(226, 31, 99, 0.2) 1px,
+      transparent 1px,
+      transparent 38px
+    ),
+    repeating-radial-gradient(
+      circle at 6% 96%,
+      rgba(226, 31, 99, 0.1) 0px,
+      rgba(226, 31, 99, 0.1) 1px,
+      transparent 1px,
+      transparent 46px
+    );
+  background-color: var(--black);
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+  height: 100svh;
+}
+
+::selection {
+  background: var(--velvet-bright);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--velvet);
+  border-radius: 6px;
+  border: 2px solid var(--black);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--velvet-bright);
+}
+
+button {
+  font-family: var(--mono);
+}
+
+input,
+textarea,
+select {
+  font-family: var(--mono);
+}
